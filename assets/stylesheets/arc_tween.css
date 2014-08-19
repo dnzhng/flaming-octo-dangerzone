@@ -1,17 +1,22 @@
 path {
   fill-rule: evenodd;
-  fill: #aaa;
-  fill-opacity: .7;
-/*  stroke: #666;
-  stroke-width: 1.5px;*/
+  fill: #fff;
+  opacity: .7;
 }
 
 svg {
   display: block;
-  margin: 0 auto;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .hours, .minutes, .seconds {
   font-family: sans-serif;
   font-size: 3em;
+  fill: #fff;
+  fill-opacity: .7;
 }
