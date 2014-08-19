@@ -1,7 +1,7 @@
 path {
   fill-rule: evenodd;
   fill: #fff;
-  opacity: .7;
+  opacity: .9;
 }
 
 svg {
@@ -15,8 +15,9 @@ svg {
 }
 
 .hours, .minutes, .seconds {
-  font-family: sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
   font-size: 3em;
   fill: #fff;
-  fill-opacity: .7;
+  fill-opacity: .9;
 }

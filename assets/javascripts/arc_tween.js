@@ -32,6 +32,29 @@ var svg = d3.select(".clock").append("svg:svg")
   .append("svg:g")
   .attr("transform", "translate(50," + ((w * aspect) / 2) + ")");
 
+// Drop Shadow Filter
+var defs = svg.append("defs");
+
+var filter = defs.append("filter")
+    .attr("id", "dropshadow")
+
+filter.append("feGaussianBlur")
+    .attr("in", "SourceAlpha")
+    .attr("stdDeviation", 4)
+    .attr("result", "blur");
+filter.append("feOffset")
+    .attr("in", "blur")
+    .attr("dx", 2)
+    .attr("dy", 2)
+    .attr("result", "offsetBlur");
+
+var feMerge = filter.append("feMerge");
+
+feMerge.append("feMergeNode")
+    .attr("in", "offsetBlur")
+feMerge.append("feMergeNode")
+    .attr("in", "SourceGraphic");
+
 d3.select(window).on('resize', resize);
 
 setInterval(function() {
@@ -52,6 +75,7 @@ setInterval(function() {
   path.enter().append("g")
     .attr("class", function(d) { return d.name })
     .append("svg:path")
+    .attr("filter", "url(#dropshadow)")
     .attr("transform", function(d, i) {
       return "translate(" + (x(i)+i*20 - 70) + ",0)";
     })
@@ -78,14 +102,15 @@ function appendTime(a) {
   d3.select("text." + a.name).remove();
   d3.select("." + a.name).append("text")
   .attr("class", a.name)
+  .attr("filter", "url(#dropshadow)")
   .text(a.value)
 
   d3.select("text.hours")
-    .attr("transform", "translate(155, 45)");
+    .attr("transform", "translate(150, 45)");
   d3.select("text.minutes")
-    .attr("transform", "translate(475, 45)")
+    .attr("transform", "translate(470, 45)")
   d3.select("text.seconds")
-    .attr("transform", "translate(795, 45)")
+    .attr("transform", "translate(790, 45)")
 
 }
 
