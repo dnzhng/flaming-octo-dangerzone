@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Arc Tween Clock Tabs",
+  "version": "0.0.1",
+
+  "description": "A browser extension that displays an arc tween clock when you open a new tab.",
+
+  "chrome_url_overrides" : {
+    "newtab": "newTab.html"
+  }
+}
