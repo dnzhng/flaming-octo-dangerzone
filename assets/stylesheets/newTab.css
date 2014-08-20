@@ -1,0 +1,19 @@
+body {
+  background-size: 100%;
+}
+
+#most_visited {
+  position: absolute;
+  bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  margin: 0 25px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
