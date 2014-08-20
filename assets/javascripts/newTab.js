@@ -9,7 +9,7 @@ function buildPopupDom(mostVisitedURLs) {
   for (var i = 0; i < 5; i++) {
     var a = popupDiv.appendChild(document.createElement('a'));
     a.href = mostVisitedURLs[i].url;
-    a.appendChild(document.createTextNode(mostVisitedURLs[i].title.match(/[a-zA-Z]+/)));
+    a.appendChild(document.createTextNode(mostVisitedURLs[i].title.toLowerCase().match(/[a-zA-Z]+/)));
   }
 }
 
