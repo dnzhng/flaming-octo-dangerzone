@@ -17,3 +17,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
+
+a:first-letter{
+  text-transform:capitalize;
+}
