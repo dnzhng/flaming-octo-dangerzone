@@ -1,6 +1,8 @@
-$.getJSON("http://www.reddit.com/r/wallpapers/hot.json?sort=new", function(response) {
-  imageUrl = response.data.children[0].data.url;
-  $('body').css("background-image", "url("+ imageUrl + ")");
+$.getJSON("http://www.reddit.com/r/EarthPorn/hot.json?sort=new", function(response) {
+  var n = Math.round(Math.random()*5);
+  console.log(response.data.children[n].data.url);
+  imageUrl = response.data.children[n].data.url;
+  $('html').css("background-image", "url("+ imageUrl + ")");
 })
 
 function buildPopupDom(mostVisitedURLs) {
