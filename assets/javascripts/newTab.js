@@ -1,6 +1,5 @@
 $.getJSON("http://www.reddit.com/r/EarthPorn/hot.json?sort=new", function(response) {
-  var n = Math.round(Math.random()*5);
-  console.log(response.data.children[n].data.url);
+  var n = Math.round(Math.random()*5)+1;
   imageUrl = response.data.children[n].data.url;
   $('html').css("background-image", "url("+ imageUrl + ")");
 })
