@@ -106,11 +106,11 @@ function appendTime(a) {
   .text(a.value)
 
   d3.select("text.hours")
-    .attr("transform", "translate(150, 45)");
+    .attr("transform", "translate(165, 40)");
   d3.select("text.minutes")
-    .attr("transform", "translate(470, 45)")
+    .attr("transform", "translate(485, 40)")
   d3.select("text.seconds")
-    .attr("transform", "translate(790, 45)")
+    .attr("transform", "translate(805, 40)")
 
 }
 
